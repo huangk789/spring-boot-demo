@@ -18,6 +18,7 @@
 		<filter class="ch.qos.logback.classic.filter.LevelFilter">
 			<!--过滤 Error-->
 			<level>ERROR</level>
+
 			<!--匹配到就禁止-->
 			<onMatch>DENY</onMatch>
 			<!--没有匹配到就允许-->

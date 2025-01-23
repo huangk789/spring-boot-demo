@@ -3,7 +3,7 @@ package com.xkcoding.dynamic.datasource.controller;
 import com.xkcoding.dynamic.datasource.annotation.DefaultDatasource;
 import com.xkcoding.dynamic.datasource.datasource.DatasourceConfigCache;
 import com.xkcoding.dynamic.datasource.mapper.DatasourceConfigMapper;
-import com.xkcoding.dynamic.datasource.model.DatasourceConfig;
+import com.xkcoding.dynamic.datasource.entity.DatasourceConfig;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

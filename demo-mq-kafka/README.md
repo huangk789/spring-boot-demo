@@ -6,10 +6,18 @@
 
 > 注意：本 demo 基于 Spring Boot 2.1.0.RELEASE 版本，因此 spring-kafka 的版本为 2.2.0.RELEASE，kafka-clients 的版本为2.0.0，所以 kafka 的版本选用为  kafka_2.11-2.1.0
 
+```bash
+docker pull wurstmeister/kafka:2.11-0.11.0.3
+docker network create kafka-network
+
+
+docker run -d --name kafka --network kafka-network -p 9092:9092 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092 -e KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9092 wurstmeister/kafka:2.11-0.11.0.3
 创建一个名为 `test` 的Topic
 
 ```bash
 ./bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+
+
 ```
 
 ## pom.xml

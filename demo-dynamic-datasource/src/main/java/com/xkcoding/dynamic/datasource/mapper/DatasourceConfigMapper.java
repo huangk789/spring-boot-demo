@@ -1,7 +1,7 @@
 package com.xkcoding.dynamic.datasource.mapper;
 
 import com.xkcoding.dynamic.datasource.config.MyMapper;
-import com.xkcoding.dynamic.datasource.model.DatasourceConfig;
+import com.xkcoding.dynamic.datasource.entity.DatasourceConfig;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

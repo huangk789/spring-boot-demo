@@ -1,6 +1,5 @@
 package com.xkcoding.elasticsearch.model;
 
-import com.xkcoding.elasticsearch.constants.EsConsts;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,7 +18,7 @@ import java.util.Date;
  * @author yangkai.shen
  * @date Created in 2018-12-20 17:29
  */
-@Document(indexName = EsConsts.INDEX_NAME, type = EsConsts.TYPE_NAME, shards = 1, replicas = 0)
+@Document(indexName = "person”",  shards = 1, replicas = 0)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

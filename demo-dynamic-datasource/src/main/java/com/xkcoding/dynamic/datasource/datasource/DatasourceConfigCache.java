@@ -1,6 +1,6 @@
 package com.xkcoding.dynamic.datasource.datasource;
 
-import com.xkcoding.dynamic.datasource.model.DatasourceConfig;
+import com.xkcoding.dynamic.datasource.entity.DatasourceConfig;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

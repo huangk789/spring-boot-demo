@@ -10,6 +10,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import javax.naming.Name;
+import java.util.List;
 
 /**
  * LdapDemoApplicationTest
@@ -27,7 +29,29 @@ public class LdapDemoApplicationTests {
 
     @Test
     public void contextLoads() {
+
+
     }
+
+    @Test
+    public  void  addPersonTest(){
+        Person person = new Person();
+        person.setUid("123");
+
+        person.setSurname("赵");
+        person.setGivenName("四");
+        person.setUserPassword("123456");
+
+        // required field
+        person.setPersonName("赵四");
+        person.setUidNumber("666");
+        person.setGidNumber("666");
+        person.setHomeDirectory("/home/zhaosi");
+        person.setLoginShell("/bin/bash");
+        personService.addPerson(person);
+
+    }
+
 
     /**
      * 测试查询单个
@@ -42,6 +66,12 @@ public class LdapDemoApplicationTests {
     /**
      * 测试查询列表
      */
+    @Test
+    public  void  findAllTest(){
+        List<Person> personList=personService.findAll();
+        System.out.println(personList);
+    }
+
     @Test
     public void listAllPersonTest() {
         Result result = personService.listAllPerson();

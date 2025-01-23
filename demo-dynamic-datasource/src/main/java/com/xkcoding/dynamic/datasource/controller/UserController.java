@@ -1,7 +1,7 @@
 package com.xkcoding.dynamic.datasource.controller;
 
 import com.xkcoding.dynamic.datasource.mapper.UserMapper;
-import com.xkcoding.dynamic.datasource.model.User;
+import com.xkcoding.dynamic.datasource.entity.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

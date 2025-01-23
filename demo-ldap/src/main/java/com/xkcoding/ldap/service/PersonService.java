@@ -4,6 +4,8 @@ import com.xkcoding.ldap.api.Result;
 import com.xkcoding.ldap.entity.Person;
 import com.xkcoding.ldap.request.LoginRequest;
 
+import java.util.List;
+
 /**
  * PersonService
  *
@@ -42,4 +44,7 @@ public interface PersonService {
      */
     void delete(Person person);
 
+    List<Person> findAll();
+
+    void addPerson(Person person);
 }

@@ -1,6 +1,6 @@
 package com.xkcoding.dynamic.datasource.datasource;
 
-import com.xkcoding.dynamic.datasource.model.DatasourceConfig;
+import com.xkcoding.dynamic.datasource.entity.DatasourceConfig;
 import com.xkcoding.dynamic.datasource.utils.SpringUtil;
 import com.zaxxer.hikari.HikariDataSource;
 import lombok.extern.slf4j.Slf4j;

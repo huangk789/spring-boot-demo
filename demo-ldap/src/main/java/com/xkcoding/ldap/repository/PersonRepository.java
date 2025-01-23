@@ -1,6 +1,7 @@
 package com.xkcoding.ldap.repository;
 
 import com.xkcoding.ldap.entity.Person;
+import org.springframework.data.ldap.repository.LdapRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,7 +15,7 @@ import javax.naming.Name;
  * @since 2019-08-26 1:02
  */
 @Repository
-public interface PersonRepository extends CrudRepository<Person, Name> {
+public interface PersonRepository extends CrudRepository<Person,Name> {
 
     /**
      * 根据用户名查找

@@ -1,5 +1,6 @@
 spring:
-  data:
-    elasticsearch:
-      cluster-name: docker-cluster
-      cluster-nodes: localhost:9300
+  elasticsearch:
+    rest:
+      uris: "http://localhost:9200" # 替换为你的Elasticsearch实例地址
+      username: "elastic" # 如果你的Elasticsearch设置了安全认证，提供用户名
+      password: "o0gfxXTVCS6U12WVreHB" # 如果你的Elasticsearch设置了安全认证，提供密码

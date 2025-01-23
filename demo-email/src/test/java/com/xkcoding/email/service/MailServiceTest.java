@@ -33,7 +33,7 @@ public class MailServiceTest extends SpringBootDemoEmailApplicationTests {
      */
     @Test
     public void sendSimpleMail() {
-        mailService.sendSimpleMail("237497819@qq.com", "这是一封简单邮件", "这是一封普通的SpringBoot测试邮件");
+        mailService.sendSimpleMail("10808570@qq.com", "这是一封简单邮件", "这是一封普通的SpringBoot测试邮件");
     }
 
     /**
@@ -49,7 +49,7 @@ public class MailServiceTest extends SpringBootDemoEmailApplicationTests {
         context.setVariable("url", "https://github.com/xkcoding/spring-boot-demo");
 
         String emailTemplate = templateEngine.process("welcome", context);
-        mailService.sendHtmlMail("237497819@qq.com", "这是一封模板HTML邮件", emailTemplate);
+        mailService.sendHtmlMail("10808570@qq.com", "这是一封模板HTML邮件", emailTemplate);
     }
 
     /**

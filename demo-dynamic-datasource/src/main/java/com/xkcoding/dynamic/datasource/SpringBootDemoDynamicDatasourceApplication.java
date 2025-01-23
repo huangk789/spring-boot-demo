@@ -3,7 +3,7 @@ package com.xkcoding.dynamic.datasource;
 import com.xkcoding.dynamic.datasource.datasource.DatasourceConfigCache;
 import com.xkcoding.dynamic.datasource.datasource.DatasourceConfigContextHolder;
 import com.xkcoding.dynamic.datasource.mapper.DatasourceConfigMapper;
-import com.xkcoding.dynamic.datasource.model.DatasourceConfig;
+import com.xkcoding.dynamic.datasource.entity.DatasourceConfig;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

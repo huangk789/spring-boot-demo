@@ -88,6 +88,8 @@ public class ElasticsearchAutoConfiguration {
             final CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
 
             credentialsProvider.setCredentials(AuthScope.ANY, new UsernamePasswordCredentials(account.getUsername(), account.getPassword()));
+            builder.setHttpClientConfigCallback(httpClientBuilder -> httpClientBuilder.setDefaultCredentialsProvider(credentialsProvider));
+
         }
         return new RestHighLevelClient(builder);
     }

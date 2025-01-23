@@ -10,12 +10,13 @@ spring:
     admin:
       client:
         # Spring Boot Admin 服务端地址
-        url: "http://localhost:8000/"
+        url: http://192.168.0.117:8000
         instance:
           metadata:
             # 客户端端点信息的安全认证信息
             user.name: ${spring.security.user.name}
             user.password: ${spring.security.user.password}
+          service-base-url: http://192.168.0.117:8080
   security:
     user:
       name: xkcoding

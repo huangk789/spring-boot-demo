@@ -10,10 +10,12 @@ import com.xkcoding.ldap.util.LdapUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ldap.core.LdapTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 
 /**
  * PersonServiceImpl
@@ -28,6 +30,8 @@ import java.security.NoSuchAlgorithmException;
 public class PersonServiceImpl implements PersonService {
     private final PersonRepository personRepository;
 
+    @Autowired
+    private LdapTemplate ldapTemplate;
     /**
      * 登录
      *
@@ -91,4 +95,13 @@ public class PersonServiceImpl implements PersonService {
         log.info("删除用户{}成功", person.getUid());
     }
 
+    @Override
+    public List<Person> findAll() {
+        return ldapTemplate.findAll(Person.class);
+    }
+
+    @Override
+    public void addPerson(Person person) {
+       ldapTemplate.create(person);
+    }
 }

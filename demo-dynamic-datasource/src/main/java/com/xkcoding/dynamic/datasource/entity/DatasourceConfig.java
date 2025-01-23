@@ -1,4 +1,4 @@
-package com.xkcoding.dynamic.datasource.model;
+package com.xkcoding.dynamic.datasource.entity;
 
 import lombok.Data;
 
